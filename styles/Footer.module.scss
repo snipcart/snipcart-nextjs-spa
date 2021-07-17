@@ -1,0 +1,21 @@
+@import 'globals';
+
+.footer {
+  color: white;
+  background: linear-gradient(90deg, #707070 0%, #474747 100%);
+  &__left {
+    margin-left: auto;
+  }
+
+  a {
+    color: deeppink;
+  }
+  p {
+    color: pink;
+    display: flex;
+    margin: 0;
+    @include centered;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
