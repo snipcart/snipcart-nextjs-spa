@@ -64,7 +64,7 @@ export const products: IProduct[] = [
         price: 5.00,
         image: veiltailBettaPicture,
         description: "By far the most common betta fish. You can recognize it by its long tail aiming downwards.",
-        url: 'veiltail'
+        url: '/api/products/veiltail'
     }
 ]
 

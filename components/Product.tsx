@@ -27,7 +27,7 @@ const Product = (props: IProductProps) => {
                     data-item-name={props.product.name}
                     data-item-price={props.product.price}
                     data-item-url={props.product.url}
-                    data-item-image={props.product.image}>
+                    data-item-image={props.product.image.src}>
                     Add to cart
                 </button>
             </div>
