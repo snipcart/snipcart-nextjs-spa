@@ -1,7 +1,7 @@
 import ProductList from "../components/ProductList";
 import Contact from "../components/Contact";
 import Head from "next/head";
-import {GetStaticProps} from "next";
+import {GetServerSideProps} from "next";
 import {IProduct} from "../components/Product";
 
 interface IProductListProps {
@@ -17,7 +17,7 @@ export default function Home(props: IProductListProps) {
       </main></>
   )
 }
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
     const req = await fetch('http://localhost:3000/api/products');
     const data = await req.json();
 
