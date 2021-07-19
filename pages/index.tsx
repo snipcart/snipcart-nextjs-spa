@@ -40,7 +40,7 @@ export const products: IProduct[] = [
         price: 25.00,
         image: halfmoonBettaPicture,
         description: "The Halfmoon betta is arguably one of the prettiest betta species. It is recognized by its large tail that can flare up to 180 degrees.",
-        url: 'https://snipcart-next-2021.vercel.app/api/products/halfmoon'
+        url: '/api/products/halfmoon'
     },
     {
         id: "dragonscale",
