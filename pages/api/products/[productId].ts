@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const {productId} = req.query;
     const product: IProduct | undefined = products.find(p => p.id === productId);
     if (!product) {
-        res.status(404);
+        res.status(404).json({});
         return ;
     }
     const snipcartProduct: ISnipcartProduct = {...product, image: product?.image.src ?? ""}
