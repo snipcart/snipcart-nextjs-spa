@@ -1,11 +1,12 @@
-.header {
-  @include centered;
+@use 'mixins';
 
+.header {
+  @include mixins.centered;
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
 
-  &__summary {
+  a {
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -13,19 +14,21 @@
     margin-left: auto;
   }
 
-  &__price {
-    color: $color-purple;
+  a > span {
+    color: mixins.$color-purple;
     margin-left: 10px;
   }
 
   &__logo {
     height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__title {
-    margin: 0;
     padding: 0;
     font-size: 24px;
-    margin-left: 20px;
+    margin: 0 0 0 20px;
   }
 }

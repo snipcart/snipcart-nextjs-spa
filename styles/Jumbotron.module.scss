@@ -1,28 +1,4 @@
 @use 'mixins';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
-
-* {
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-}
-
-html, body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
-
-.app {
-  min-height: 100vh;
-  min-width: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-.product-list {
-  @include mixins.centered;
-}
-
 
 .background-image {
   position: absolute;
@@ -33,7 +9,6 @@ html, body {
   transform: rotate(20deg);
   pointer-events: none;
 }
-
 
 .promotional-message {
   margin-bottom: 100px;
@@ -57,9 +32,4 @@ html, body {
     margin: 0;
     color: mixins.$color-purple;
   }
-}
-
-.product__price-button-container {
-  display: flex;
-  grid-area: button;
 }

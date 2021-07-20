@@ -1,20 +1,22 @@
-@import 'globals';
+@use 'mixins';
 
 .footer {
   color: white;
   background: linear-gradient(90deg, #707070 0%, #474747 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__left {
-    margin-left: auto;
+    margin-right: auto;
   }
 
   a {
-    color: deeppink;
+    color: white;
   }
   p {
-    color: pink;
     display: flex;
     margin: 0;
-    @include centered;
+    @include mixins.centered;
     padding-top: 20px;
     padding-bottom: 20px;
   }

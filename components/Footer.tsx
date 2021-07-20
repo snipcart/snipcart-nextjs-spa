@@ -5,8 +5,10 @@ export default function Footer(){
         <footer className={styles.footer}>
             <p>
                 Next.js app with a&nbsp;<a href="https://snipcart.com">Snipcart</a>&nbsp;- powered store
-                    <a className={styles.__left} href="https://github.com/snipcart/snipcart-nextjs">Github</a>
             </p>
+            <div className={styles.footer__left}>
+                <a href="https://github.com/snipcart/snipcart-nextjs">Github</a>
+            </div>
         </footer>
     )
 }

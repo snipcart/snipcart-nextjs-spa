@@ -1,0 +1,29 @@
+$color-purple: #9094FF;
+$color-light-grey: #EBEBEB;
+$color-dark: #343434;
+$max-width: 1000px;
+
+@mixin centered {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include smallerThanDesktop {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin smallerThanDesktop {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}

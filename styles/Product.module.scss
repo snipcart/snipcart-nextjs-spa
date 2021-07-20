@@ -1,0 +1,131 @@
+@use 'mixins';
+.product {
+  display: grid;
+  width: 100%;
+
+  grid-template-areas:
+  "title        title         image"
+  "description  description  image"
+  "button       button       image"
+  ".            .            image";
+  grid-template-columns: 1fr 1fr 3fr;
+  margin-bottom: 100px;
+  grid-column-gap: 100px;
+
+  &:nth-of-type(odd) {
+    grid-template-areas:
+    "image title        title"
+    "image description  description"
+    "image button       button"
+    "image .            .";
+    grid-template-columns: 3fr 1fr 1fr;
+
+    @include mixins.mobile {
+      grid-template-areas:
+      "image        image      "
+      "title         title     "
+      "description  description"
+      "button       button     ";
+      grid-template-columns: 1fr 1fr;
+
+      img {
+        height: 300px;
+        max-height: 300px;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    grid-area: title;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__description {
+    grid-area: description;
+    line-height: 1.75rem;
+    min-height: 175px;
+    @include mixins.mobile {
+      min-height: 0;
+    }
+  }
+
+  &__price {
+    grid-area: price;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &__image {
+    grid-area: image;
+    width: 100%;
+    height: 98%;
+    object-fit: fill;
+    box-shadow: 0 18.025px 43.775px rgba(0, 0, 0, 0.25);
+
+    @include mixins.mobile {
+      height: 300px;
+      max-height: 300px;
+      object-fit: contain;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__price-button-container {
+    display: flex;
+    grid-area: button;
+  }
+
+  &__button {
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 6px 20px;
+    border: none;
+    background-color: mixins.$color-purple;
+    color: white;
+    position: relative;
+
+    &:hover {
+      transition: 0.2s all;
+      &:before {
+        transform: scale(1.15, 1.4);
+      }
+    }
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      background-color: mixins.$color-purple;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      z-index: -1;
+      transform: scale(1);
+      transition: all 0.3s cubic-bezier(0.16, 0.8, 0.66, 1.54);
+    }
+  }
+  // TODO move mixins in colors
+  @include mixins.mobile {
+    grid-template-areas:
+    "image        image      "
+    "title         title     "
+    "description  description"
+    "button       button     ";
+    grid-template-columns: 1fr 1fr;
+
+    .product__image {
+      height: 300px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}

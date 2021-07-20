@@ -8,6 +8,7 @@ import dragonScaleBettaPicture from "../public/dragonscale.jpg";
 import crowntailBettaPicture from "../public/crowntail.jpeg";
 import veiltailBettaPicture from "../public/veiltail.jpg";
 import {GetStaticProps} from "next";
+import Jumbotron from "../components/Jumbotron";
 
 interface IProductListProps {
     products: IProduct[]
@@ -21,8 +22,10 @@ export default function Home({products}: IProductListProps) {
                 <link rel="preconnect" href="https://app.snipcart.com"/>
                 <link rel="preconnect" href="https://cdn.snipcart.com"/>
                 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"/>
+                <link rel="shortcut icon" href="../public/favicon.ico" />
             </Head>
             <main className="main">
+                <Jumbotron />
                 <ProductList products={products}/>
                 <Contact/>
             </main>
