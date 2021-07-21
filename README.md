@@ -9,9 +9,9 @@ Tutorial steps 🛠
 - Product validation
 - Styling your app
 
--> Follow the [tutorial here]().
+-> Follow the [tutorial here](https://snipcart.com/blog/next-js-ecommerce-spa-tutorial).
 
--> Try the demo [here]().
+-> Try the demo [here](https://snipcart-next-2021.vercel.app/).
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
