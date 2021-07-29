@@ -1,3 +1,5 @@
+![Next.js e-commerce tutorial](https://snipcart.com/media/205931/nextjs_spa_e-commerce.png)
+
 This post/tutorial focuses on Next.js SPA for e-commerce.
 
 Tutorial steps 🛠
